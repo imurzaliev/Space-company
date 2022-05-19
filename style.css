@@ -225,3 +225,31 @@ p {
 .dot-indicators > [aria-selected='true'] {
   background-color: hsl(var(--clr-white) / 1);
 }
+
+.number-indicators > * {
+  display: grid;
+  border: 0.15rem solid hsl(var(--clr-white) / 0.25);
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: hsl(var(--clr-dark) / 0.25);
+  color: hsl(var(--clr-white));
+  font-size: var(--fs-500);
+  text-decoration: none;
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus {
+  border: 0.2rem solid hsl(var(--clr-white) / 1);
+}
+
+.number-indicators > [aria-selected='true'] {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark));
+}
+
+.number-button {
+  display: flex;
+  align-items: center;
+}
