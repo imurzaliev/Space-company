@@ -193,6 +193,8 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+  background: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(2rem);
 }
 
 @media (max-width: 35rem) {
@@ -201,7 +203,6 @@ p {
     position: fixed;
     z-index: 1000;
     inset: 0 0 0 30%;
-    background: black;
     list-style: none;
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
@@ -229,15 +230,22 @@ p {
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
 
-.underline-indicators > *:hover,
 .underline-indicators > *:focus {
   border-color: hsl(var(--clr-white) / 0.5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected='true'] {
-  color: hsl(var(--clr-white) / 1);
-  border-color: hsl(var(--clr-white) / 1);
+@media (hover: hover) {
+  .underline-indicators > *:hover {
+    border-color: hsl(var(--clr-white) / 0.5);
+  }
+}
+
+@media (min-width: 35rem) {
+  .underline-indicators > .active,
+  .underline-indicators > [aria-selected='true'] {
+    color: hsl(var(--clr-white) / 1);
+    border-color: hsl(var(--clr-white) / 1);
+  }
 }
 
 .tab-list {

@@ -10,10 +10,10 @@
 }
 
 /* Remove inner paddings */
-ul[class],
+/* ul[class],
 ol[class] {
   padding: 0;
-}
+} */
 
 /* Remove outer paddings */
 body,
