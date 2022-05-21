@@ -3,4 +3,5 @@ const menu = document.querySelector('[data-menu]');
 
 toggleButton.addEventListener('click', () => {
   menu.classList.toggle('active');
+  toggleButton.classList.toggle('humburger-x');
 });
