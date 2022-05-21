@@ -222,6 +222,10 @@ p {
     transform: translateX(100%);
   }
 
+  .active {
+    transform: translateX(0);
+  }
+
   .primary-navigation.underline-indicators > .active {
     border: 0;
   }
@@ -238,6 +242,7 @@ p {
     width: 1.5rem;
     aspect-ratio: 1;
     border: 0;
+    cursor: pointer;
   }
 }
 
