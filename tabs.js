@@ -45,9 +45,9 @@ function changeTabPanel(e) {
   hideElements(mainContainer, '[role="tabpanel"]');
   hideElements(mainContainer, 'picture');
 
-  tabs.forEach((tab) => {
-    tab.setAttribute('aria-selected', false);
-  });
+  tabContainer
+    .querySelector('[aria-selected="true"]')
+    .setAttribute('aria-selected', false);
 
   targetTab.setAttribute('aria-selected', true);
   mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
