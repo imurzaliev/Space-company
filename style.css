@@ -711,6 +711,14 @@ body {
     padding-bottom: 0;
     grid-template-areas: 'title' 'content' 'tabs' 'image';
   }
+
+  .grid-container--technology > h1 {
+    padding-inline: 1rem;
+  }
+
+  .grid-container--technology > img {
+    height: 310px;
+  }
 }
 
 @media (min-width: 45em) {
