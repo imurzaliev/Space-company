@@ -54,10 +54,10 @@ function changeTabPanel(e) {
 
 function hideContent(container, content) {
   container.querySelectorAll(content).forEach((item) => {
-    item.setAttribute('hidden', true);
+    item.classList.add('hidden');
   });
 }
 
 function showContent(container, content) {
-  container.querySelector(content).removeAttribute('hidden');
+  container.querySelector(content).classList.remove('hidden');
 }
