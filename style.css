@@ -668,7 +668,7 @@ body {
   grid-template-areas: 'title' 'image' 'tabs' 'content';
 }
 
-.grid-container--technology > img {
+.grid-container--technology > picture {
   grid-area: image;
   width: 100vw;
   height: 170px;
@@ -687,7 +687,7 @@ body {
   background-image: url(./assets/technology/image-space-capsule-landscape.jpg);
 }
 
-.grid-container--technology > .number-button {
+.grid-container--technology > .number-indicators {
   grid-area: tabs;
 }
 
@@ -716,7 +716,7 @@ body {
     padding-inline: 1rem;
   }
 
-  .grid-container--technology > img {
+  .grid-container--technology > picture {
     height: 310px;
   }
 }
@@ -769,12 +769,46 @@ body {
         1fr
       );
     justify-items: start;
-    grid-template-areas: '. title title .' '. content image .' '. tabs image .';
+    grid-template-areas:
+      '. title title .'
+      '. content image .'
+      '. tabs image .';
   }
 
   .grid-container--crew > picture {
     grid-column: span 2;
     align-self: end;
     max-width: 90%;
+  }
+
+  .grid-container--technology {
+    grid-template-columns:
+      minmax(1rem, 1fr) minmax(0, 3rem) minmax(0, 45rem) minmax(0, 20rem)
+      minmax(1rem, 1fr);
+    grid-template-areas:
+      '. title title title .'
+      '. tabs content image .';
+  }
+
+  .grid-container--technology > picture {
+    grid-column: span 2;
+    justify-self: end;
+    max-width: 90%;
+  }
+
+  .number-indicators {
+    display: grid;
+  }
+
+  #launch-vehicle-image {
+    background-image: url(./assets/technology/image-launch-vehicle-portrait.jpg);
+  }
+
+  #spaceport-image {
+    background-image: url(./assets/technology/image-spaceport-portrait.jpg);
+  }
+
+  #space-capsule-image {
+    background-image: url(./assets/technology/image-space-capsule-portrait.jpg);
   }
 }
